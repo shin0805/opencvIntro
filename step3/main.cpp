@@ -1,8 +1,4 @@
 #include <opencv2/opencv.hpp>
-#include <opencv2/imgproc/imgproc.hpp>
-#include <opencv2/core/core.hpp>
-#include <opencv2/core.hpp>
-#include <opencv2/highgui/highgui.hpp>
 
 int main() {
   // image.pngをimgに代入
@@ -18,8 +14,9 @@ int main() {
   // キーが押されるまで待機
   cv::waitKey(0);
 
+  // ハフ変換
   std::vector<cv::Vec2f> lines;
-  cv::HoughLines(img_canny, lines, 0.5, CV_PI / 360, 80); // 140
+  cv::HoughLines(img_canny, lines, 0.5, CV_PI / 360, 80);
 
   std::vector<cv::Vec2f>::iterator it = lines.begin();
   for (; it != lines.end(); ++it) {
