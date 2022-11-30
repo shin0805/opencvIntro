@@ -28,6 +28,7 @@ int main() {
     pt1.y = cv::saturate_cast<int>(y0 + 1000 * (a));
     pt2.x = cv::saturate_cast<int>(x0 - 1000 * (-b));
     pt2.y = cv::saturate_cast<int>(y0 - 1000 * (a));
+    // 直線描画
     cv::line(img, pt1, pt2, cv::Scalar(0, 0, 255), 3, cv::LINE_AA);
   }
 
