@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.0)
-project(step1)
+project(step6)
 set(SOURCE_FILE main.cpp)
 
 # OpenCVのビルド環境の設定ファイルを読み込む
